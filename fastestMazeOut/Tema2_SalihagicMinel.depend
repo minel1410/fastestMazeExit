@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1705932664 source:c:\users\minel\desktop\asa projekat\tema2_salihagicminel\main.cpp
+	<iostream>
+	"Funkcije.h"
+
+1705932924 c:\users\minel\desktop\asa projekat\tema2_salihagicminel\funkcije.h
+	<string>
+	<vector>
+	<utility>
+
+1705932826 source:c:\users\minel\desktop\asa projekat\tema2_salihagicminel\funkcije.cpp
+	"Funkcije.h"
+	<fstream>
+	<sstream>
+	<vector>
+	<string>
+	<iostream>
+	<queue>
+	<iomanip>
+	<algorithm>
+

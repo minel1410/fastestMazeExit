@@ -39,5 +39,35 @@ This program enables the loading of a maze from a text file and the finding of t
 
 ### Function: `napraviMatricu`
 
-```cpp
-vector<vector<int>> napraviMatricu(const string& filename, vector<pair<char, int>>& slovo_broj);
+This function loads the maze from a text file, the name of which is passed as a parameter. The maze is defined by the number of rows and the positions of the passages within each row.
+
+- **Parameters:**
+  - `filename`: The name of the file containing the maze definition.
+  - `slovo_broj`: A reference to a vector of pairs mapping row characters to their corresponding row numbers.
+
+- **Returns:**  
+  A matrix representing the binary maze, where each position is marked with `0` for walls and `1` for passages.
+
+### Function: `udaljenost`
+
+This function uses the Lee algorithm to find the shortest distance between two points within the maze.
+
+- **Parameters:**
+  - `prviZid`: Character representing the row in which the start position is located.
+  - `pozicijaPrvog`: Position within the row for the start point.
+  - `drugiZid`: Character representing the row in which the end position is located.
+  - `pozicijaDrugog`: Position within the row for the end point.
+
+- **Functionality:**  
+  The function works by adding each valid position in the maze to a queue, starting from the start position. For each position in the matrix, it records the distance from the start position, initially set to `0`, and increments by `1` with each step. Additionally, it creates a matrix of positions called `parent`, which records the parent of each position within the maze, aiding in reconstructing the shortest path from start to end.
+
+### Function: `jeLiValidna`
+
+This function checks if a given position within the vector of vectors is valid, meaning it is within the matrix and the value at that coordinate is `1`, indicating a passage.
+
+### Structure: `pozicija`
+
+This structure represents a single point or position within the matrix. It has attributes `x` and `y`, representing the row and column numbers. The constructor and operator `==` are implemented to check if two positions have the same coordinates.
+
+Other functions in the program handle input validation, path reconstruction, maze printing, and other auxiliary tasks.
+
